@@ -1,0 +1,27 @@
+install Wazuh Manager (Linux)....
+Login to Ubuntu server
+Update system:
+sudo apt update
+sudo apt upgrade -y
+
+Install required packages:
+sudo apt install curl apt-transport-https unzip lsb-release gnupg -y
+
+Download Wazuh installation script:
+curl -sO https://packages.wazuh.com/4.7/wazuh-install.sh
+
+Run installation:
+sudo bash wazuh-install.sh -a
+
+This installs:
+Wazuh Manager
+Elasticsearch
+Kibana Dashboard
+
+After installation you will get:
+Dashboard URL
+Username : admin
+Password : ********
+
+Access dashboard:
+https://192.168.1.10
