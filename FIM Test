@@ -1,0 +1,6 @@
+Modify a file:
+sudo nano /etc/passwd
+
+Within 5 seconds
+Alert appears in dashboard:
+Security Events → File Integrity Monitoring
