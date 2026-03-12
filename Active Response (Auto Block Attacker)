@@ -1,0 +1,23 @@
+Create firewall script:
+sudo nano /var/ossec/active-response/bin/block-ip.sh
+
+Script:
+#!/bin/bash
+IP=$1
+iptables -A INPUT -s $IP -j DROP
+
+Make executable:
+chmod +x block-ip.sh
+
+Add configuration:
+sudo nano /var/ossec/etc/ossec.conf
+
+Add:
+<active-response>
+  <command>block-ip</command>
+  <location>local</location>
+  <level>10</level>
+</active-response>
+
+Restart:
+systemctl restart wazuh-manager
