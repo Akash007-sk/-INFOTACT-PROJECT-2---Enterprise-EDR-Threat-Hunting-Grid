@@ -1,0 +1,12 @@
+On the Wazuh manager.....
+Run:
+sudo /var/ossec/bin/manage_agents
+Choose:
+A -> Add Agent
+
+Example:
+Agent Name : Windows-Agent
+IP : 192.168.1.20
+
+Then extract key:
+E -> Extract key
