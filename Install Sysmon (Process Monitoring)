@@ -1,0 +1,19 @@
+sysmon64.exe -i sysmonconfig.xml
+
+sysmonconfig.xml: 
+<Sysmon schemaversion="4.50">
+  <EventFiltering>
+
+    <ProcessCreate onmatch="include">
+      <CommandLine condition="contains">powershell</CommandLine>
+    </ProcessCreate>
+
+    <NetworkConnect onmatch="include">
+      <DestinationPort>4444</DestinationPort>
+    </NetworkConnect>
+
+  </EventFiltering>
+</Sysmon>
+
+Verify:
+Event Viewer → Applications and Services Logs → Microsoft → Sysmon
