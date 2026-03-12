@@ -1,0 +1,8 @@
+Simulate brute force
+Linux machine:
+hydra -l admin -P passwords.txt ssh://192.168.1.20
+Detection generated.
+
+Simulate malware execution:
+powershell -enc <payload>
+Alert generated.
