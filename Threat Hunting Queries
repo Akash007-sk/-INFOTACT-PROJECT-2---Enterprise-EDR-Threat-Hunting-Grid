@@ -1,0 +1,5 @@
+PowerShell execution:
+data.win.eventdata.commandLine: powershell
+
+Suspicious network activity:
+sysmon.event_id:3 AND destination.port:4444
