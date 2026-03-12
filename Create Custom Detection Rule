@@ -1,0 +1,17 @@
+Create custom rule:
+sudo nano /var/ossec/etc/rules/local_rules.xml
+
+<group name="authentication">
+
+  <rule id="100001" level="10">
+    <if_sid>5710</if_sid>
+    <description>Multiple failed login attempts detected</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>
+</group>
+
+
+Restart manager:
+sudo systemctl restart wazuh-manager
