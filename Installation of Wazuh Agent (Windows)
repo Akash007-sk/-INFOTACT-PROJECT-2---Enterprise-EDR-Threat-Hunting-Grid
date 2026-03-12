@@ -1,0 +1,17 @@
+Download agent from:
+https://packages.wazuh.com/4.x/windows/wazuh-agent.msi
+Install it.
+
+During installation enter:
+Manager IP : 192.168.1.10
+
+After installation open PowerShell as Administrator....
+
+Import the key:
+"C:\Program Files (x86)\ossec-agent\agent-auth.exe" -m 192.168.1.10
+
+Start service:
+net start wazuh
+
+Check connection:
+services.msc
