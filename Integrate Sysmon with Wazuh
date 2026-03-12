@@ -1,0 +1,13 @@
+C:\Program Files (x86)\ossec-agent\ossec.conf
+
+Add:
+<localfile>
+  <location>Microsoft-Windows-Sysmon/Operational</location>
+  <log_format>eventchannel</log_format>
+</localfile>
+
+Restart agent:
+net stop wazuh
+net start wazuh
+
+Now Sysmon logs will appear in Wazuh dashboard.
